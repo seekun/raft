@@ -53,7 +53,7 @@ define([], function () {
                     .attr("transform", transform);
                 g.append("circle")
                     .attr("r", 0)
-                    .style("fill", "green");
+                    .style("fill", "#02b875");
                 g.append("text")
                     .attr("y", "2")
                     .attr("fill", "white")

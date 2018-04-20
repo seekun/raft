@@ -6,22 +6,22 @@
 define([], function () {
     var TYPE = {
             "AEREQ": {
-                color: "red",
+                color: "#d9534f",
                 size: 2,
                 opacity: 1,
             },
             "AERSP": {
-                color: "red",
+                color: "#d9534f",
                 size: 1,
                 opacity: 0,
             },
             "RVREQ": {
-                color: "green",
+                color: "#02b875",
                 size: 2,
                 opacity: 1,
             },
             "RVRSP": {
-                color: "green",
+                color: "#02b875",
                 size: 1,
                 opacity: 0,
             }

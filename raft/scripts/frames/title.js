@@ -21,7 +21,9 @@ define([], function () {
             layout.invalidate();
         })
         .after(500, function () {
-            frame.model().subtitle = '<p style="visibility:visible"><em><a href="https://github.com/djmpink/raft" target="_blank">github</a></em></h1>';
+            frame.model().subtitle = '<p style="visibility:visible">' +
+                '<a href="https://github.com/djmpink/raft" target="_blank">Github</a> ' +
+                '</p>';
             layout.invalidate();
             frame.model().controls.show();
         })

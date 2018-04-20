@@ -29,7 +29,7 @@ define([], function () {
                 $(".btn.rollback").css('visibility','visible').hide().fadeIn(600);
             },
             html: function() {
-                return '<button type="button" style="visibility:hidden" class="btn btn-default rollback" alt="Replay previous frame"><span class="glyphicon glyphicon-repeat"></span></button>';
+                return '<button type="button" style="visibility:hidden" class="btn btn-outline-success rollback" alt="Replay previous frame"><span class="fa fa-repeat"></span></button>';
             },
             click: function() {
                 model.player().current().rollback(2);
@@ -43,7 +43,7 @@ define([], function () {
                 $(".btn.resume").css('visibility','visible').hide().fadeIn(600);
             },
             html: function() {
-                return '<button type="button" style="visibility:hidden" class="btn btn-default resume" alt="Continue to next frame">下一步<span class="glyphicon glyphicon-chevron-right"></span></button>';
+                return '<button type="button" style="visibility:hidden" class="btn btn-outline-success resume" alt="Continue to next frame">下一步<span class="glyphicon glyphicon-chevron-right"></span></button>';
             },
             click: function() {
                 if (self.callback !== null) {

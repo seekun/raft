@@ -50,7 +50,7 @@ define([], function () {
         this.g().selectAll(".node").data(nodes, function (d) { return d.id; })
             .call(function () {
                 var transform = function(d) { return "translate(" + self.parent().scales.x(d.x) + "," + self.parent().scales.y(d.y) + ")"; },
-                    fill = function (d) { return d.state() === "stopped" ? "gray" : "steelblue"; },
+                    fill = function (d) { return d.state() === "stopped" ? "gray" : "#4582ec"; },
                     stroke = {
                         dash: function (d) { return (d.state() === "candidate" ? "5,5" : ""); },
                         opacity: function (d) { return (d.state() === "follower" || d.state() === "stopped" ? 0 : 1); },

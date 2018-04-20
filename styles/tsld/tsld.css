@@ -31,8 +31,6 @@ nav {
 
 .title {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
   z-index: 950;
   padding: 10px;
   margin-left: auto;
@@ -52,9 +50,7 @@ nav {
 
 .subtitle {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
   z-index: 950;
   padding: 10px;
   margin-left: auto;
