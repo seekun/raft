@@ -35,7 +35,7 @@ define(["../model/log_entry"], function (LogEntry) {
             .after(800, function () {
                 model().subtitle =
                     '<h2><em>Raft</em> is a protocol for implementing distributed consensus.</h2>'
-                    + '<h2>而<em>Raft</em> 就是实现了分布式一致性的算法。</h2>'
+                    + '<h2>而<em>Raft</em> 就是实现了分布式一致性的算法</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -44,7 +44,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>Let\'s look at a high level overview of how it works.</h2>'
-                    + '<h2>接下来我们了解一下它是怎样工作的。</h2>'
+                    + '<h2>接下来我们了解一下它是怎样工作的</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -98,7 +98,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 node("b")._state = "follower";
                 model().subtitle =
                     '<h2>All our nodes start in the follower state.</h2>'
-                    + '<h2>一开始，所有的节点都是跟随者。</h2>'
+                    + '<h2>一开始，所有的节点都是跟随者</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -107,7 +107,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>If followers don\'t hear from a leader then they can become a candidate.</h2>'
-                    + '<h2>如果一段时间后，跟随者没有监听到领导者的消息，则自己将变成候选人身份。</h2>'
+                    + '<h2>如果一段时间后，跟随者没有监听到领导者的消息，则自己将变成候选人身份</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -120,7 +120,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>The candidate then requests votes from other nodes.</h2>'
-                    + '<h2>然后，候选人将向其它节点发起一次选举投票请求。</h2>'
+                    + '<h2>然后，候选人将向其它节点发起一次选举投票请求</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -163,7 +163,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>This process is called <em>Leader Election</em>.</h2>'
-                    + '<h2>这个过程叫做 <em>领导人选举</em>。</h2>'
+                    + '<h2>这个过程叫做 <em>领导人选举</em> </h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -201,7 +201,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>Each change is added as an entry in the node\'s log.</h2>'
-                    + '<h2>每次更改都会记录到节点的日志里。</h2>'
+                    + '<h2>每次更改都会记录到节点的日志里</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -210,7 +210,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 frame.snapshot();
                 model().subtitle =
                     '<h2>This log entry is currently uncommitted so it won\'t update the node\'s value.</h2>'
-                    + '<h2>不过，这条记录还没有提交，所以还不会更改节点的值。</h2>'
+                    + '<h2>不过，这条记录还没有提交，所以还不会更改节点的值</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -242,7 +242,7 @@ define(["../model/log_entry"], function (LogEntry) {
                 model().send(node("c"), node("a"), {type: "AEREQ"});
                 model().subtitle =
                     '<h2>then the leader waits until a majority of nodes have written the entry.</h2>'
-                    + '<h2>然后领导人进入等待状态知道大多数节点确认记录成功。</h2>'
+                    + '<h2>然后领导人进入等待状态知道大多数节点确认记录成功</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })

@@ -73,7 +73,7 @@ define([], function () {
             .after(600, function () {
                 frame.model().subtitle =
                     '<h3>For this example, you can think of our <span style="color:steelblue">node</span> as a database server that stores a single value.</h3>'
-                    + '<h3>比如, 这个 <span style="color:steelblue">节点</span> 是一个数据库，并且存储在一个值（x）。</h3>'
+                    + '<h3>比如, 这个 <span style="color:steelblue">节点</span> 是一个数据库，并且存储在一个值（x）</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -94,7 +94,7 @@ define([], function () {
             .after(1000, function () {
                 frame.model().subtitle =
                     '<h3>We also have a <span style="color:green">client</span> that can send a value to the server.</h3>'
-                    + '<h3>另外，我们还有一个 <span style="color:green">客户端</span>可以发送数据到这个数据库服务.</h3>'
+                    + '<h3>另外，我们还有一个 <span style="color:green">客户端</span>可以发送数据到这个数据库服务</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -122,7 +122,7 @@ define([], function () {
             .after(100, function () {
                 frame.model().subtitle =
                     '<h3>Coming to agreement, or <em>consensus</em>, on that value is easy with one node.</h3>'
-                    + '<h3>在只有一个节点的情况下，达成<em>一致性</em>很容易实现。</h3>'
+                    + '<h3>在只有一个节点的情况下，达成<em>一致性</em>很容易实现</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })

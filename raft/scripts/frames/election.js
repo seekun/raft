@@ -72,7 +72,7 @@ define([], function () {
                 model().ensureSingleCandidate();
                 model().subtitle =
                     '<h2>In Raft there are two timeout settings which control elections.</h2>'
-                    + '<h2>Raft要求有两个超时时间设置来控制选举。</h2>'
+                    + '<h2>Raft要求有两个超时时间设置来控制选举</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -122,7 +122,7 @@ define([], function () {
             .after(model().defaultNetworkLatency * 0.25, function () {
                 subtitle(
                     '<h2>...and sends out <em>Request Vote</em> messages to other nodes.</h2>'
-                    + '<h2>...并且发送 <em>投票请求</em> 给其它节点。</h2>'
+                    + '<h2>...并且发送 <em>投票请求</em> 给其它节点</h2>'
                 );
             })
             .after(model().defaultNetworkLatency, function () {
@@ -134,7 +134,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>...and the node resets its election timeout.</h2>'
-                    + '<h2>...然后这个节点重置它的选举周期时间，从新计时。</h2>'
+                    + '<h2>...然后这个节点重置它的选举周期时间，从新计时</h2>'
                 );
             })
 
@@ -166,7 +166,7 @@ define([], function () {
             .after(model().defaultNetworkLatency, function () {
                 subtitle(
                     '<h2>Followers then respond to each <em>Append Entries</em> message.</h2>'
-                    +'<h2>跟随者将响应 <em>附加日志</em> 消息。</h2>'
+                    +'<h2>跟随者将响应 <em>附加日志</em> 消息</h2>'
                 );
             })
             .after(1, function () {
@@ -219,7 +219,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>Requiring a majority of votes guarantees that only one leader can be elected per term.</h2>'
-                    +'<h2>多数投票能保证每届只有一个领导人可以当选。</h2>'
+                    +'<h2>多数投票能保证每届只有一个领导人可以当选</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -262,7 +262,7 @@ define([], function () {
             .after(model().defaultNetworkLatency * 0.75, function () {
                 subtitle('' +
                     '<h2>...and each reaches a single follower node before the other.</h2>'
-                    +'<h2>...并且每个都收到了一个跟随者的投票响应.</h2>'
+                    +'<h2>...并且每个都收到了一个跟随者的投票响应</h2>'
                 );
             })
             .after(model().defaultNetworkLatency, function () {
@@ -284,7 +284,7 @@ define([], function () {
                 model().resetLatencies();
                 subtitle('' +
                     '<h2>Node ' + model().leader().id + ' received a majority of votes in term ' + model().leader().currentTerm() + ' so it becomes leader.</h2>'
-                    +'<h2>节点 ' + model().leader().id + ' 在选举周期 ' + model().leader().currentTerm() + '里得到了大多数选票，所以他成为了领导人。</h2>'
+                    +'<h2>节点 ' + model().leader().id + ' 在选举周期 ' + model().leader().currentTerm() + '里得到了大多数选票，所以他成为了领导人</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
