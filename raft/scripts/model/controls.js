@@ -43,7 +43,7 @@ define([], function () {
                 $(".btn.resume").css('visibility','visible').hide().fadeIn(600);
             },
             html: function() {
-                return '<button type="button" style="visibility:hidden" class="btn btn-default resume" alt="Continue to next frame">Continue <span class="glyphicon glyphicon-chevron-right"></span></button>';
+                return '<button type="button" style="visibility:hidden" class="btn btn-default resume" alt="Continue to next frame">下一步<span class="glyphicon glyphicon-chevron-right"></span></button>';
             },
             click: function() {
                 if (self.callback !== null) {
