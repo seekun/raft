@@ -93,8 +93,8 @@ define([], function () {
             })
             .after(1000, function () {
                 frame.model().subtitle =
-                    '<h3>We also have a <span style="color:green">client</span> that can send a value to the server.</h3>'
-                    + '<h3>另外，我们还有一个 <span style="color:green">客户端</span>可以发送数据到这个数据库服务</h3>'
+                    '<h3>We also have a <span style="color:#02b875">client</span> that can send a value to the server.</h3>'
+                    + '<h3>另外，我们还有一个 <span style="color:#02b875">客户端</span>可以发送数据到这个数据库服务</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })

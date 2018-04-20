@@ -81,8 +81,8 @@ define([], function () {
             })
             .after(100, function () {
                 subtitle(
-                    '<h2>First is the <span style="color:green">election timeout</span>.</h2>'
-                    + '<h2>首先是 <span style="color:green">竞选超时</span>。</h2>'
+                    '<h2>First is the <span style="color:#02b875">election timeout</span>.</h2>'
+                    + '<h2>首先是 <span style="color:#02b875">竞选超时</span>。</h2>'
                 );
             })
             .after(1, function () {

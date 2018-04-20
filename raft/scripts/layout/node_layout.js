@@ -61,7 +61,7 @@ define([], function () {
                     .attr("transform", transform);
                 g.append("circle")
                     .attr("r", 0)
-                    .style("stroke", "black")
+                    .style("stroke", "#495057")
                     .style("stroke-width", 5)
                     .style("stroke-dasharray", stroke.dash)
                     .style("stroke-opacity", stroke.opacity)
@@ -134,13 +134,13 @@ define([], function () {
                             var text = {
                                 x: function(d) { return self.parent().scales.size(0.25); },
                                 y: function(d) { return (self.parent().scales.size(d.h) / 2) + 2; },
-                                fill: function(d) { return (d.index <= node.commitIndex() ? "black" : "red"); },
+                                fill: function(d) { return (d.index <= node.commitIndex() ? "#495057" : "#d9534f"); },
                             };
                             var g = this.enter().append("g").attr("class", "log-entry");
                             g.attr("transform", transform);
                             g.append("rect")
                                 .attr("shape-rendering", "crispEdges")
-                                .attr("stroke", "black")
+                                .attr("stroke", "#495057")
                                 .attr("fill", "white");
                             g.append("text")
                                 .attr("x", text.x)

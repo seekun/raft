@@ -64,11 +64,11 @@ define([], function () {
         this.g().selectAll(".message").data(messages, function (d) { return d.id; })
             .call(function () {
                 var fill = {
-                    color: function (d) { return TYPE[d.type()] ? TYPE[d.type()].color : "black"; },
+                    color: function (d) { return TYPE[d.type()] ? TYPE[d.type()].color : "#495057"; },
                     opacity: function (d) { return TYPE[d.type()] ? TYPE[d.type()].opacity : 1; }
                 },
                 stroke = {
-                    color: function (d) { return TYPE[d.type()] ? TYPE[d.type()].color : "black"; }
+                    color: function (d) { return TYPE[d.type()] ? TYPE[d.type()].color : "#495057"; }
                 };
                 this.enter().append("circle")
                     .attr("class", "message")
