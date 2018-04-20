@@ -19,7 +19,7 @@ define([], function () {
         };
 
         this.html = function() {
-            return '<div class="btn-group">'
+            return '<div class="btn-group" style="margin-top: 20px">'
                  + (model.player().current().rollbackable(2) ? self.rollback.html() : "") + self.resume.html()
                  + '</div>';
         };
