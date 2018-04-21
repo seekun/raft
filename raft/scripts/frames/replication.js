@@ -85,14 +85,14 @@ define([], function () {
             .then(function () {
                 subtitle('' +
                     '<h2>Once we have a leader elected we need to replicate all changes to our system to all nodes.</h2>'
-                    + '<h2>一旦选举出了领导者，我们需要向所有节点复制变化的数据</h2>'
+                    + '<h2>一旦选举出了领导者，我们需要向所有节点通知这一消息，并需要持续维持领导人地位</h2>'
                     , false);
             })
             .then(wait).indefinite()
             .then(function () {
                 subtitle('' +
-                    '<h2>This is done by using the same <em>Append Entries</em> message that was used for heartbeats.</h2>'
-                    + '<h2>这是通过周期性的发送相同的 <em>附加日志</em>消息心跳包实现的</h2>'
+                    '<h2>This is done by using the same ﻿<span style="color:#f0ad4e">Append Entries</span> message that was used for heartbeats.</h2>'
+                    + '<h2>这是通过周期性的发送 ﻿<span style="color:#f0ad4e">附加日志</span> 消息（心跳包）实现的</h2>'
                     , false);
             })
             .then(wait).indefinite()
@@ -122,7 +122,7 @@ define([], function () {
             .after(model().defaultNetworkLatency, function () {
                 subtitle(
                     '<h2>The change is appended to the leader\'s log...</h2>'
-                    + '<h2>这个数据被添加到领导人的日志里...</h2>'
+                    + '<h2>这条变更记录被添加到领导人的日志里...</h2>'
                 );
             })
             .at(model(), "appendEntriesRequestsSent", function () {
@@ -130,7 +130,7 @@ define([], function () {
             .after(model().defaultNetworkLatency * 0.25, function (event) {
                 subtitle(
                     '<h2>...then the change is sent to the followers on the next heartbeat.</h2>'
-                    + '<h2>...然后在下一个心跳中将数据发送给跟随者</h2>'
+                    + '<h2>...然后在下一个心跳中将变更记录发送给跟随者</h2>'
                 );
             })
             .after(1, clear)
@@ -138,7 +138,7 @@ define([], function () {
                 if (event.target === model().leader()) {
                     subtitle(
                         '<h2>An entry is committed once a majority of followers acknowledge it...</h2>'
-                        + '<h2>一旦大多数的追随者承认了这条记录，那么这条记录就会被提交...</h2>'
+                        + '<h2>一旦大多数的跟随者确认了这条记录，那么这条记录就会被提交...</h2>'
                     );
                 }
             })
@@ -152,7 +152,7 @@ define([], function () {
             .after(model().defaultNetworkLatency, function (event) {
                 subtitle(
                     '<h2>Now let\'s send a command to increment the value by "2".</h2>'
-                    + '<h2>现在，我们将这个值加2</h2>'
+                    + '<h2>比如，我们希望加"2"</h2>'
                 );
                 client("X").send(model().leader(), "ADD 2");
             })
@@ -160,7 +160,7 @@ define([], function () {
             .at(model(), "recv", function (event) {
                 subtitle('' +
                     '<h2>Our system value is now updated to "7".</h2>'
-                    + '<h2>最终我们系统里的值被更新为7了</h2>'
+                    + '<h2>最终我们系统里的值变成"7"了</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -198,7 +198,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>Let\'s add a partition to separate A & B from C, D & E.</h2>'
-                    + '<h2>假设增加一个分区，A和B一组，C、D和E一组</h2>'
+                    + '<h2>假如我们增加了一个分区，并将A和B分为一组，C、D和E分为一组</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -224,7 +224,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>Because of our partition we now have two leaders in different terms.</h2>'
-                    + '<h2>由于分区原因，现在我们有两个不同的领导人了</h2>'
+                    + '<h2>由于分区原因，系统中出现了两个不同的领导人</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -240,14 +240,14 @@ define([], function () {
                 client("Y").send(node("B"), "SET 3");
                 subtitle(
                     '<h2>One client will try to set the value of node B to "3".</h2>'
-                    + '<h2>其中一个客户端将把节点B的值设置为3</h2>'
+                    + '<h2>其中一个客户端将把节点B的值设置为"3"</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
             .after(1, function () {
                 subtitle(
                     '<h2>Node B cannot replicate to a majority so its log entry stays uncommitted.</h2>'
-                    + '<h2>节点B不能同步大多数，所以他的日志记录仍为未提交</h2>'
+                    + '<h2>但节点B不能同步大多数，所以他的日志记录仍为未提交</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -270,7 +270,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>Now let\'s heal the network partition.</h2>'
-                    + '<h2>现在，我们修复了网络分区问题</h2>'
+                    + '<h2>随后，我们修复了网络分区问题</h2>'
                     , false);
             })
             .after(1, wait).indefinite()
@@ -293,7 +293,7 @@ define([], function () {
             .after(1, function () {
                 subtitle('' +
                     '<h2>Both nodes A & B will roll back their uncommitted entries and match the new leader\'s log.</h2>'
-                    + '<h2>此时，节点A和节点B将会回滚它们未提交的记录，并匹同步新领导人的日志</h2>'
+                    + '<h2>此时，节点A和节点B将会回滚它们未提交的记录，并同步新领导人的日志</h2>'
                 );
             })
             .after(1, wait).indefinite()

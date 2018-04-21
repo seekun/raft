@@ -21,8 +21,8 @@ define([], function () {
             })
             .after(500, function () {
                 frame.model().subtitle = '<p style="visibility:visible">' +
-                    '<a href="https://github.com/djmpink/raft" target="_blank">Github</a> ' +
-                    '<a href="http://7player.cn/" target="_blank">7player.cn</a> ' +
+                    '<a href="https://github.com/djmpink/raft" target="_blank">Github</a> | ' +
+                    '<a href="http://7player.cn/" target="_blank">7player.cn</a> | ' +
                     '<a href="http://thesecretlivesofdata.com/raft/" target="_blank">英文原版</a> ' +
                     '</p>';
                 layout.invalidate();
