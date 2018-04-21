@@ -32,9 +32,9 @@ define([], function () {
             .after(1000, function () {
                 frame.model().title =
                     '<h2 style="visibility:visible">So What is Distributed Consensus?</h2>'
-                    + '<h2 style="visibility:visible">那么，什么是分布式一致性协议?</h2>'
+                    + '<h2 style="visibility:visible">在介绍算法之前，先了解一下什么是"分布式一致性"问题</h2>'
                     + '<h3 style="visibility:hidden;">Let\'s start with an example...</h3>'
-                    + '<h3 style="visibility:hidden;">先来看个示例吧...</h3>'
+                    + '<h3 style="visibility:hidden;">我们通过一个例子来说明...</h3>'
                     + '<br/>' + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -72,8 +72,8 @@ define([], function () {
             })
             .after(600, function () {
                 frame.model().subtitle =
-                    '<h3>For this example, you can think of our <span style="color:steelblue">node</span> as a database server that stores a single value.</h3>'
-                    + '<h3>比如, 这个 <span style="color:steelblue">节点</span> 是一个数据库，并且存储在一个值（x）</h3>'
+                    '<h3>For this example, you can think of our <span style="color:#4582ec">node</span> as a database server that stores a single value.</h3>'
+                    + '<h3>具体的，可以假设这个 <span style="color:#4582ec">节点</span> 是一个数据库，并且存储了一个数值（x）</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -94,7 +94,7 @@ define([], function () {
             .after(1000, function () {
                 frame.model().subtitle =
                     '<h3>We also have a <span style="color:#02b875">client</span> that can send a value to the server.</h3>'
-                    + '<h3>另外，我们还有一个 <span style="color:#02b875">客户端</span>可以发送数据到这个数据库服务</h3>'
+                    + '<h3>然后，我们还有一个<span style="color:#02b875">客户端</span>，它可以操作数据库修改数值</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -121,8 +121,8 @@ define([], function () {
             .after(100, wait).indefinite()
             .after(100, function () {
                 frame.model().subtitle =
-                    '<h3>Coming to agreement, or <em>consensus</em>, on that value is easy with one node.</h3>'
-                    + '<h3>在只有一个节点的情况下，达成<em>一致性</em>很容易实现</h3>'
+                    '<h3>Coming to agreement, or <span style="color:#f0ad4e">consensus</span>, on that value is easy with one node.</h3>'
+                    + '<h3>在这种只有一个节点的情况下，数值达成<span style="color:#f0ad4e">一致</span>是比较容易实现的</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -133,7 +133,7 @@ define([], function () {
                 frame.snapshot();
                 frame.model().subtitle =
                     '<h3>But how do we come to consensus if we have multiple nodes?</h3>'
-                    +'<h3>但是，在多个节点的情况下，如何实现一致性?</h3>'
+                    +'<h3>但是，在有多个节点的情况下，如何实现一致呢?</h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })
@@ -151,8 +151,8 @@ define([], function () {
             .after(100, function () {
                 frame.snapshot();
                 frame.model().subtitle =
-                    '<h3>That\'s the problem of <em>distributed consensus</em>.</h3>'
-                    +'<h3>这就是所谓的 <em>分布式一致性问题</em>.</h3>'
+                    '<h3>That\'s the problem of <span style="color:#f0ad4e">distributed consensus</span>.</h3>'
+                    +'<h3>这个问题就是所谓的 <span style="color:#f0ad4e">分布式一致性问题</span></h3>'
                     + frame.model().controls.html();
                 layout.invalidate();
             })

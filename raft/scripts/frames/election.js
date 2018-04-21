@@ -72,7 +72,7 @@ define([], function () {
                 model().ensureSingleCandidate();
                 model().subtitle =
                     '<h2>In Raft there are two timeout settings which control elections.</h2>'
-                    + '<h2>Raft要求有两个超时时间设置来控制选举</h2>'
+                    + '<h2>在Raft算法中，会有两个超时时间设置来控制选举过程</h2>'
                     + model().controls.html();
                 layout.invalidate();
             })
@@ -81,8 +81,8 @@ define([], function () {
             })
             .after(100, function () {
                 subtitle(
-                    '<h2>First is the <span style="color:#02b875">election timeout</span>.</h2>'
-                    + '<h2>首先是 <span style="color:#02b875">竞选超时</span>。</h2>'
+                    '<h2>First is the <span style="color:#f0ad4e">election timeout</span>.</h2>'
+                    + '<h2>首先是 <span style="color:#f0ad4e">竞选超时</span>。</h2>'
                 );
             })
             .after(1, function () {
@@ -94,7 +94,7 @@ define([], function () {
             .after(1, function () {
                 subtitle(
                     '<h2>The election timeout is randomized to be between 150ms and 300ms.</h2>'
-                    + '<h2>竞选超时是一般是150毫秒到300毫秒之间的随机数</h2>'
+                    + '<h2>竞选超时一般是150毫秒到300毫秒之间的随机数</h2>'
                 );
             })
             .after(1, function () {
@@ -109,8 +109,8 @@ define([], function () {
             })
             .after(1, function () {
                 subtitle(
-                    '<h2>After the election timeout the follower becomes a candidate and starts a new <em>election term</em>...</h2>'
-                    + '<h2>当到达竞选超时时间后，跟随者变成了候选人，并开始一个新的 <em>选举周期</em>...</h2>'
+                    '<h2>After the election timeout the follower becomes a candidate and starts a new ﻿<span style="color:#f0ad4e">election term</span>...</h2>'
+                    + '<h2>当到达竞选超时时间后，跟随者转变为候选人角色，并开始一个新的 <span style="color:#f0ad4e">选举周期</span>...</h2>'
                 );
             })
             .after(1, function () {
@@ -121,8 +121,8 @@ define([], function () {
             })
             .after(model().defaultNetworkLatency * 0.25, function () {
                 subtitle(
-                    '<h2>...and sends out <em>Request Vote</em> messages to other nodes.</h2>'
-                    + '<h2>...并且发送 <em>投票请求</em> 给其它节点</h2>'
+                    '<h2>...and sends out <span style="color:#f0ad4e">Request Vote</span> messages to other nodes.</h2>'
+                    + '<h2>...并且发送 <span style="color:#f0ad4e">投票请求</span> 给其它节点</h2>'
                 );
             })
             .after(model().defaultNetworkLatency, function () {
