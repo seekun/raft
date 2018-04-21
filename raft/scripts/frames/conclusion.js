@@ -25,11 +25,11 @@ define([], function () {
 
             .after(500, function () {
                 frame.model().title =
-                    '<h2 style="visibility:visible">For more information（了解更多）:</h2>'
-                    + '<h3 style="visibility:visible"><a href="https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf">The Raft Paper</a></h3>'
-                    + '<h3 style="visibility:visible"><a href="https://raft.github.io/">Raft Web Site</a></h3>'
-                    + '<h3 style="visibility:visible"><a href="http://7player.cn/2018/04/19/%E8%81%8A%E8%81%8A%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8-%E5%9B%BE%E8%A7%A3paxos/">图解Paxos</a></h3>'
-                    + '<h3 style="visibility:visible"><a href="http://7player.cn/">关于我</a> <a href="https://github.com/djmpink">Github</a></h3>'
+                    '<h4 style="visibility:visible">For more information（了解更多）:</h4>'
+                    + '<h5 style="visibility:visible"><a href="https://ramcloud.stanford.edu/wiki/download/attachments/11370504/raft.pdf">The Raft Paper</a></h5>'
+                    + '<h5 style="visibility:visible"><a href="https://raft.github.io/">Raft Web Site</a></h5>'
+                    + '<h5 style="visibility:visible"><a href="http://7player.cn/2018/04/19/%E8%81%8A%E8%81%8A%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8-%E5%9B%BE%E8%A7%A3paxos/">图解Paxos</a></h5>'
+                    + '<h5 style="visibility:visible"><a href="http://7player.cn/">关于我</a> <a href="https://github.com/djmpink">Github</a></h5>'
                     + '<br/>' + frame.model().controls.html();
                 layout.invalidate();
             })

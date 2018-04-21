@@ -13,9 +13,9 @@ define([], function () {
         })
 
             .after(500, function () {
-                frame.model().title = '<h1 style="visibility:visible">Raft</h1>'
-                    + '<h2 style="visibility:visible">Understandable Distributed Consensus</h2>'
-                    + '<h2 style="visibility:visible">轻松理解分布式一致性算法——Raft</h2>'
+                frame.model().title = '<h3 style="visibility:visible">Raft</h3>'
+                    + '<h4 style="visibility:visible">Understandable Distributed Consensus</h4>'
+                    + '<h4 style="visibility:visible">轻松理解分布式一致性算法——Raft</h4>'
                     + '<br/>' + frame.model().controls.html();
                 layout.invalidate();
             })
