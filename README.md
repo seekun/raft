@@ -1,25 +1,17 @@
-The Secret Lives of Data
+Raft算法
 ========================
 
-> Understanding what your bits do when you're not looking.
+> 轻松理解Raft算法 
 
-## Overview
+[主页：raft.taillog.cn](http://raft.taillog.cn/)
 
-So often we use databases and servers without really understanding how they work.
-The way that data flows is critical to performance and reliability.
+通过动画演示Raft算法原理与过程
 
-This project seeks to spread the knowledge of our systems through interactive visualization.
-If you have a system that you understand and wish to share then please add a [GitHub Issue](https://github.com/benbjohnson/thesecretlivesofdata/issues).
-Data visualization knowledge is not necessary -- just the desire to spread some knowledge.
+* 分布式一致性问题
+* 选举
+* 日志复制
 
+[博客]：[7player](http://7player.cn/) 
 
-## Visualizations
+[原文]： [Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) 
 
-Below is a list of data visualizations and their associated Github issue.
-Please report any bugs you find or any suggestions you have for how to make these visualizations more understandable.
-
-1. [Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) ([#1](https://github.com/benbjohnson/thesecretlivesofdata/issues/1))
-
-2. Apache Kafka ([#4](https://github.com/benbjohnson/thesecretlivesofdata/issues/4)) - *Planning*
-
-If you have suggestions for new topics, please submit a new Github issue.
