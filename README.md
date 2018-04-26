@@ -12,9 +12,10 @@ Raft算法
 * 日志复制
 
 
+[原文]：[Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) 
+
+[Github]：[github](https://github.com/benbjohnson/thesecretlivesofdata) 
+
+> 说明：基于原文翻译，优化UI
 
 [博客]：[7player](http://7player.cn/) 
-
-[原文]： [Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) 
-
-> 说明：翻译，优化UI
