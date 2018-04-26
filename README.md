@@ -11,7 +11,10 @@ Raft算法
 * 选举
 * 日志复制
 
+
+
 [博客]：[7player](http://7player.cn/) 
 
 [原文]： [Raft: Understandable Distributed Consensus](http://thesecretlivesofdata.com/raft) 
 
+> 说明：翻译，优化UI
