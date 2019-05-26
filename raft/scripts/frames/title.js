@@ -21,9 +21,7 @@ define([], function () {
             })
             .after(500, function () {
                 frame.model().subtitle = '<p style="visibility:visible">' +
-                    '<a href="http://7player.cn/" target="_blank">左小岸 · 7player.cn</a> | ' +
-                    '<a href="http://raft.taillog.cn/" target="_blank">网页</a> | ' +
-                    '<a href="http://thesecretlivesofdata.com/raft/" target="_blank">英文原版</a> ' +
+                    '<div>网络工程科研导论第13组: 魏奇, 周杨皓, 王渝川, 石坤, 吕友豪 </div>' +
                     '</p>';
                 layout.invalidate();
                 frame.model().controls.show();
